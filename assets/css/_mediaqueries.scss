@@ -1,0 +1,14 @@
+$breakpoints: (
+  smallphones: 320px,
+  mediumphones: 360px,
+  tablets: 760px,
+  laptops: 1200px,
+);
+
+@mixin mediaqueries($key) {
+  $size: map-get($breakpoints, $key);
+
+  @media (min-width: $size) {
+    @content;
+  }
+}
